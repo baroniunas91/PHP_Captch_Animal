@@ -1,0 +1,105 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 15px;
+}
+    .top p{
+        width: 200px;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .top img{
+        width: 200px;
+        height: 120px;
+        object-fit: cover;
+    }
+.bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 400px;
+}
+    .bottom label {
+        position: relative;
+        margin: 10px 5px;
+    }
+        .bottom label img {
+            display: block;
+            width: 120px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .bottom input {
+            display: none;
+        }
+        .bottom label .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .bottom input:checked+label .overlay {
+            background-color: black;
+            opacity: 0.5;
+            z-index: 1;
+        }
+.verify {
+    margin: 10px 0;
+    padding: 15px 0;
+    width: 400px;
+    text-align: center;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+    .verify.hide {
+        display: none;
+    }
+    .verify div {
+    display: inline-block;
+    background-color: blue;
+    padding: 5px 20px;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.answer {
+    display:none;
+    margin: 0px 0 5px;
+    padding: 0px 0 10px;
+    width: 400px;
+    text-align: center;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+    .answer #verify{
+        display: inline-block;
+        background-color: blue;
+        padding: 5px 10px;
+        color: white;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .answer .message .success {
+        color: green;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+    .answer .message .wrong {
+        color: red;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+.show {
+    display: block;
+}
