@@ -1,5 +1,5 @@
 const verify = document.querySelector('#verify');
-$request = () => {
+const request = () => {
     const answers = document.querySelectorAll("input:checked");
     const main = (document.querySelector(".top img")).id;
     answersArray = [];
@@ -15,6 +15,7 @@ $request = () => {
 
     axios.post("http://localhost/BIT/captch/req.php", answer)
         .then(function (response) {
+            console.log(response);
             const verifyBlock = document.querySelector('.verify');
             verifyBlock.classList.add("hide");
 
@@ -38,4 +39,4 @@ $request = () => {
         });
 }
 
-verify.addEventListener('click', $request);
+verify.addEventListener('click', request);
