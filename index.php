@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__ . '\a.php';
+    require_once __DIR__ . '/a.php';
     // _p($data);
 
 ?>

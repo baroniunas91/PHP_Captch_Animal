@@ -1,5 +1,5 @@
 <?php 
-require_once __DIR__ . '\data.php';
+require_once __DIR__ . '/data.php';
 $inputStreamData = json_decode(file_get_contents("php://input"),1);
     // _l($inputStreamData);
     $main = $inputStreamData['main'];

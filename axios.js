@@ -1,4 +1,5 @@
 const verify = document.querySelector('#verify');
+const url = "https://edgbar.000webhostapp.com/"
 const request = () => {
     const answers = document.querySelectorAll("input:checked");
     const main = (document.querySelector(".top img")).id;
@@ -13,7 +14,7 @@ const request = () => {
         main: main
     };
 
-    axios.post("http://localhost/BIT/captch/req.php", answer)
+    axios.post(url + "req.php", answer)
         .then(function (response) {
             console.log(response);
             const verifyBlock = document.querySelector('.verify');
